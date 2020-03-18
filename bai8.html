@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 08</title>
+</head>
+<body>
+<p id="r1"></p>
+<p id="r2"></p>
+<script>
+    let arr = [];
+    arr.length = 5;
+
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = Number(prompt("Số thứ " + i));
+    }
+    console.log(arr);
+
+    Sort(arr);
+
+    function Sort(array) {
+        let temp;
+        for (let i = array.length-1; i >= 0; i--) {
+            for (let j = 1; j <= i; j++) {
+                if (array[j-1] < array[j]) {
+                    temp = array[j-1];
+                    array[j-1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        console.log(array);
+    }
+</script>
+</body>
+</html>

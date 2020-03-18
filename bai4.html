@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 04</title>
+</head>
+<body>
+<p id="r1"></p>
+<p id="r2"></p>
+<script>
+    let arr = [];
+    arr.length = 5;
+
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = Number(prompt("Phần tử mảng " + i))
+    }
+    document.getElementById("r1").innerHTML = "Mảng nhập vào: " + arr;
+
+    let first = 0;
+    let last = arr.length - 1;
+    while (first < last) {
+        let b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+        first++;
+        last--;
+    }
+    document.getElementById("r2").innerHTML = "Mảng đảo ngược: " + arr;
+</script>
+</body>
+</html>

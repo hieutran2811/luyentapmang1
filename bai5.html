@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 05</title>
+</head>
+<body>
+<p id="r1"></p>
+<script>
+    let arr = [];
+    arr.length = Number(prompt("Mảng có bao nhiêu phần tử?"));
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = Number(prompt("Phần tử mảng " + i))
+        if (arr[i] < 0){
+            sum++;
+        }
+    }
+    document.getElementById("r1").innerHTML = "Chuỗi gồm có " + sum + " số nguyên âm";
+</script>
+</body>
+</html>

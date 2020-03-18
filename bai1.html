@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 01</title>
+</head>
+<body>
+<p id="sum"></p>
+<p id="result"></p>
+<script>
+    let arr = [];
+    arr.length = 5;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        arr[i] = prompt("Số thứ " + i);
+        if (arr[i] >= 10){
+            sum++;
+            document.getElementById("result").innerHTML += arr[i] + ", ";
+        }
+    }
+    document.getElementById("sum").innerHTML = "Số lượng các số lớn hơn 10 là " + sum;
+</script>
+</body>
+</html>

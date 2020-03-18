@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 03</title>
+</head>
+<body>
+<p id="max"></p>
+<p id="result"></p>
+<script>
+    let arr = [];
+    arr.length = 5;
+    arr[0] = Number(prompt("Số thứ " + 0));
+    let max = arr[0];
+    let average;
+    let sum = 0;
+    for (let i = 1; i < arr.length; i++){
+        arr[i] = Number(prompt("Số thứ " + i));
+        if (arr[i] > max){
+            max = arr[i];
+        }
+        sum = sum + arr[i];
+    }
+    sum = sum + arr[0];
+    average = sum/arr.length;
+    document.getElementById("result").innerHTML = "Giá trị trung bình: " + average;
+    document.getElementById("max").innerHTML = "Giá trị lớn nhất là: " + max;
+    console.log(arr);
+</script>
+</body>
+</html>
